@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atmanirbhar Store | Vocal for Local</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>Atmanirbhar Store</h1>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <h2>Support Local, Grow Local 🇮🇳</h2>
+  <p>Discover authentic Indian handmade and organic products.</p>
+  <button id="exploreBtn">Explore Products</button>
+</section>
+
+<section class="products" id="products">
+  <h2>Our Local Products</h2>
+  <div class="product-grid">
+    <div class="product">
+      <img src="https://images.squarespace-cdn.com/content/v1/64ff1596bf78f9494792a3d3/1707124170673-A5Y42DXZ0GQHH47KUYCK/1100x1100.jpeg" alt="Clay Pottery">
+      <h3>Clay Pottery</h3>
+      <p>Handmade earthen pots from local artisans.</p>
+      <button data-panel="slidePottery">Buy Now</button>
+    </div>
+    <div class="product">
+      <img src="https://www.ksgindia.com/images/blog/19%20JUNE%202023/17%20JULY%202023/SS16.png" alt="Craft Products">
+      <h3>Artisan Craft Collective</h3>
+      <p>Beautiful handwoven products made by rural artisans.</p>
+      <button data-panel="slideArtisan">Buy Now</button>
+    </div>
+    <div class="product">
+      <img src="https://content.jdmagicbox.com/comp/def_content/indian-restaurants/indian-restaurants8-indian-restaurants-6-0zj3n.jpg" alt="Local Foods">
+      <h3>Local Taste of India</h3>
+      <p>From farms and kitchens across India — pure, local taste.</p>
+      <button data-panel="slideLocalTaste">Buy Now</button>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <h2>About Atmanirbhar Store</h2>
+  <p>Atmanirbhar Store is an initiative to promote India's local talent and products.
+  We connect you directly to artisans, farmers, and small businesses across the country.
+  Every purchase you make supports a self-reliant India.</p>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Contact Us</h2>
+  <form id="contactForm">
+    <input type="text" placeholder="Your Name" required />
+    <input type="email" placeholder="Your Email" required />
+    <textarea rows="4" placeholder="Your Message"></textarea>
+    <button class="send" type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 Atmanirbhar Store | Made with ❤️ in India</p>
+</footer>
+
+<!-- Parent Slides -->
+<div class="slide-panel" id="slidePottery">
+  <button class="close-btn" onclick="closePanel('slidePottery')">×</button>
+  <h2>Clay Pottery Collection</h2>
+  <div class="product-item" data-subslide="vaseModal"> 
+    <img src="https://m.media-amazon.com/images/I/61hu+uVVvJL._UF894,1000_QL80_.jpg" alt="Handmade Vase">
+    <h3>Handmade Vase</h3>
+    <p>Beautifully crafted earthen vase for home decor.</p>
+  </div>
+  <div class="product-item" data-subslide="bowlModal">
+    <img src="https://i.etsystatic.com/11493970/r/il/ae894e/2469064208/il_570xN.2469064208_tm4v.jpg" alt="Decorative Bowl">
+    <h3>Decorative Bowl</h3>
+    <p>Perfect for gifting or dining table decoration.</p>
+  </div>
+</div>
+
+<div class="slide-panel" id="slideArtisan">
+  <button class="close-btn" onclick="closePanel('slideArtisan')">×</button>
+  <h2>Artisan Craft Collective</h2>
+  <div class="product-item" data-subslide="scarfModal">
+    <img src="https://image.hm.com/assets/hm/d3/37/d33773290274516233a51c411fc0a0d12b68818c.jpg" alt="Handwoven Scarf">
+    <h3>Handwoven Scarf</h3>
+    <p>Soft scarves made by rural artisans using traditional techniques.</p>
+  </div>
+  <div class="product-item" data-subslide="bagModal">
+    <img src="https://m.media-amazon.com/images/I/71EXupWBD8L._SX522_.jpg" alt="Artisan Bag">
+    <h3>Artisan Bag</h3>
+    <p>Stylish bags crafted from natural fibers.</p>
+  </div>
+</div>
+
+<div class="slide-panel" id="slideLocalTaste">
+  <button class="close-btn" onclick="closePanel('slideLocalTaste')">×</button>
+  <h2>Village-to-Table Market</h2>
+  <div class="product-item" data-subslide="milletModal">
+    <img src="https://happyharvestfarms.com/blog/wp-content/uploads/2023/12/millet.jpg" alt="Organic Millets">
+    <h3>Organic Millets</h3>
+    <p>Healthy millets directly from local farmers.</p>
+  </div>
+  <div class="product-item" data-subslide="PickelModal">
+    <img src="https://vegecravings.com/wp-content/uploads/2016/12/mango-pickle-recipe-step-by-step-instructions-7.jpg" alt="Local Honey">
+    <h3>Pickels</h3>
+    <p>Tasty,tempting and organic pickels</p>
+  </div>
+  
+</div>
+
+<!-- Sub-subslides -->
+<div class="slide-panel sub-slide" id="vaseModal">
+  <button class="close-btn" onclick="closePanel('vaseModal')">×</button>
+  <h2>Vase Collection</h2>
+  <div class="variant-card">
+    <img src="https://m.media-amazon.com/images/I/61hu+uVVvJL._UF894,1000_QL80_.jpg" alt="Vase 1">
+    <h3>Vase 1</h3>
+    <button onclick="addToCart('Vase 1')">Add to Cart</button>
+  </div>
+  <div class="variant-card">
+    <img src="https://images.unsplash.com/photo-1598300055174-71f756c8f592" alt="Vase 2">
+    <h3>Vase 2</h3>
+    <button onclick="addToCart('Vase 2')">Add to Cart</button>
+  </div>
+</div>
+
+<div class="slide-panel sub-slide" id="bowlModal">
+  <button class="close-btn" onclick="closePanel('bowlModal')">×</button>
+  <h2>Bowl Collection</h2>
+  <div class="variant-card">
+    <img src="https://i.etsystatic.com/11493970/r/il/ae894e/2469064208/il_570xN.2469064208_tm4v.jpg" alt="Bowl 1">
+    <h3>Bowl 1</h3>
+    <button onclick="addToCart('Bowl 1')">Add to Cart</button>
+  </div>
+</div>
+
+<div class="slide-panel sub-slide" id="scarfModal">
+  <button class="close-btn" onclick="closePanel('scarfModal')">×</button>
+  <h2>Scarf Collection</h2>
+  <div class="variant-card">
+    <img src="https://image.hm.com/assets/hm/d3/37/d33773290274516233a51c411fc0a0d12b68818c.jpg" alt="Scarf 1">
+    <h3>Scarf 1</h3>
+    <button onclick="addToCart('Scarf 1')">Add to Cart</button>
+  </div>
+</div>
+
+<div class="slide-panel sub-slide" id="bagModal">
+  <button class="close-btn" onclick="closePanel('bagModal')">×</button>
+  <h2>Bag Collection</h2>
+  <div class="variant-card">
+    <img src="https://m.media-amazon.com/images/I/71EXupWBD8L._SX522_.jpg" alt="Bag 1">
+    <h3>Bag 1</h3>
+    <button onclick="addToCart('Bag 1')">Add to Cart</button>
+  </div>
+</div>
+
+<div class="slide-panel sub-slide" id="milletModal">
+  <button class="close-btn" onclick="closePanel('milletModal')">×</button>
+  <h2>Millet Collection</h2>
+  <div class="variant-card">
+    <img src="https://happyharvestfarms.com/blog/wp-content/uploads/2023/12/millet.jpg" alt="Millet 1">
+    <h3>Millet 1</h3>
+    <button onclick="addToCart('Millet 1')">Add to Cart</button>
+  </div>
+</div>
+
+<div class="slide-panel sub-slide" id="honeyModal">
+  <button class="close-btn" onclick="closePanel('honeyModal')">×</button>
+  <h2>Honey Collection</h2>
+  <div class="variant-card">
+    <img src="https://images.unsplash.com/photo-1616745300968-7c3d8c8a22a4" alt="Honey 1">
+    <h3>Honey 1</h3>
+    <button onclick="addToCart('Honey 1')">Add to Cart</button>
+  </div>
+</div>
+
+<!-- Cart -->
+<button id="cartBtn">🛒</button>
+<div class="slide-panel" id="cartPanel">
+  <button class="close-btn" onclick="closePanel('cartPanel')">×</button>
+  <h2>Your Cart</h2>
+  <div id="cartItems"></div>
+  <button onclick="clearCart()">Clear Cart</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
