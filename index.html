@@ -5,85 +5,359 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Atmanirbhar Store | Vocal for Local</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
 <header>
-  <h1>Atmanirbhar Store</h1>
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#products">Products</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <div class="header-container">
+    <div class="logo">
+      <h1><i class="fas fa-hands-helping"></i> Atmanirbhar Store</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#profession">Professions</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+  </div>
 </header>
 
 <section class="hero" id="home">
-  <h2>Support Local, Grow Local 🇮🇳</h2>
-  <p>Discover authentic Indian handmade and organic products.</p>
-  <button id="exploreBtn">Explore Products</button>
+  <div class="hero-content">
+    <h2>Support Local, Grow Local <span class="india-flag">🇮🇳</span></h2>
+    <p>Discover authentic Indian handmade and organic products directly from artisans and small businesses.</p>
+    <div class="hero-buttons">
+      <button id="exploreBtn" class="btn-primary">Explore Products</button>
+      <button id="exploreProfessions" class="btn-secondary">Find Professionals</button>
+    </div>
+  </div>
+  <div class="hero-image">
+    <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Indian Artisans">
+  </div>
+</section>
+
+<section class="features">
+  <div class="container">
+    <h2>Why Choose Atmanirbhar Store?</h2>
+    <div class="features-grid">
+      <div class="feature">
+        <i class="fas fa-hands"></i>
+        <h3>Direct from Artisans</h3>
+        <p>Buy directly from skilled artisans and support their livelihood</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-leaf"></i>
+        <h3>Eco-Friendly</h3>
+        <p>All our products are sustainable and environmentally friendly</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-rupee-sign"></i>
+        <h3>Fair Pricing</h3>
+        <p>Artisans receive fair compensation for their craftsmanship</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-shipping-fast"></i>
+        <h3>Pan-India Delivery</h3>
+        <p>We deliver across India with secure packaging</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="products" id="products">
-  <h2>Our Local Products</h2>
-  <div class="product-grid">
-    <div class="product">
-      <img src="https://images.squarespace-cdn.com/content/v1/64ff1596bf78f9494792a3d3/1707124170673-A5Y42DXZ0GQHH47KUYCK/1100x1100.jpeg" alt="Clay Pottery">
-      <h3>Clay Pottery</h3>
-      <p>Handmade earthen pots from local artisans.</p>
-      <button data-panel="slidePottery">Buy Now</button>
+  <div class="container">
+    <h2>Our Local Products</h2>
+    <p class="section-subtitle">Handpicked authentic products from across India</p>
+    <div class="product-grid">
+      <div class="product">
+        <div class="product-image">
+          <img src="https://images.squarespace-cdn.com/content/v1/64ff1596bf78f9494792a3d3/1707124170673-A5Y42DXZ0GQHH47KUYCK/1100x1100.jpeg" alt="Clay Pottery">
+          <div class="product-overlay">
+            <button class="btn-overlay" data-panel="slidePottery">View Collection</button>
+          </div>
+        </div>
+        <h3>Clay Pottery</h3>
+        <p>Handmade earthen pots from local artisans.</p>
+        <div class="product-footer">
+          <span class="price">From ₹299</span>
+          <button class="btn-buy" data-panel="slidePottery">Buy Now</button>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product-image">
+          <img src="https://www.ksgindia.com/images/blog/19%20JUNE%202023/17%20JULY%202023/SS16.png" alt="Craft Products">
+          <div class="product-overlay">
+            <button class="btn-overlay" data-panel="slideArtisan">View Collection</button>
+          </div>
+        </div>
+        <h3>Artisan Craft Collective</h3>
+        <p>Beautiful handwoven products made by rural artisans.</p>
+        <div class="product-footer">
+          <span class="price">From ₹499</span>
+          <button class="btn-buy" data-panel="slideArtisan">Buy Now</button>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product-image">
+          <img src="https://content.jdmagicbox.com/comp/def_content/indian-restaurants/indian-restaurants8-indian-restaurants-6-0zj3n.jpg" alt="Local Foods">
+          <div class="product-overlay">
+            <button class="btn-overlay" data-panel="slideLocalTaste">View Collection</button>
+          </div>
+        </div>
+        <h3>Local Taste of India</h3>
+        <p>From farms and kitchens across India — pure, local taste.</p>
+        <div class="product-footer">
+          <span class="price">From ₹199</span>
+          <button class="btn-buy" data-panel="slideLocalTaste">Buy Now</button>
+        </div>
+      </div>
     </div>
-    <div class="product">
-      <img src="https://www.ksgindia.com/images/blog/19%20JUNE%202023/17%20JULY%202023/SS16.png" alt="Craft Products">
-      <h3>Artisan Craft Collective</h3>
-      <p>Beautiful handwoven products made by rural artisans.</p>
-      <button data-panel="slideArtisan">Buy Now</button>
-    </div>
-    <div class="product">
-      <img src="https://content.jdmagicbox.com/comp/def_content/indian-restaurants/indian-restaurants8-indian-restaurants-6-0zj3n.jpg" alt="Local Foods">
-      <h3>Local Taste of India</h3>
-      <p>From farms and kitchens across India — pure, local taste.</p>
-      <button data-panel="slideLocalTaste">Buy Now</button>
+  </div>
+</section>
+
+<section class="professions" id="profession">
+  <div class="container">
+    <h2>Our Local Professionals</h2>
+    <p class="section-subtitle">Skilled professionals ready to serve you</p>
+    <div class="profession-grid">
+      <div class="profession">
+        <div class="profession-image">
+          <img src="https://tiimg.tistatic.com/fp/1/005/193/fine-finish-interior-wall-paint-968.jpg" alt="Painters">
+        </div>
+        <h3>Painters</h3>
+        <p>Precision. Passion. Painted to perfection make the walls that speak up.</p>
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>4.5 (120 reviews)</span>
+        </div>
+        <button class="btn-hire">Hire Now</button>
+      </div>
+      <div class="profession">
+        <div class="profession-image">
+          <img src="https://belloscleaning.com/wp-content/uploads/2020/12/a-Professional-House-Cleaner.jpg" alt="Household Work">
+        </div>
+        <h3>Household Work</h3>
+        <p>Power-packed cleaning, every time.</p>
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <span>5.0 (89 reviews)</span>
+        </div>
+        <button class="btn-hire">Hire Now</button>
+      </div>
+      <div class="profession">
+        <div class="profession-image">
+          <img src="https://studyplex.org/blog/wp-content/uploads/2022/07/Difference-Between-Cook-_-Chef-1.webp" alt="Chef">
+        </div>
+        <h3>Chef</h3>
+        <p>Flavors that feel like home.</p>
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <span>5.0 (67 reviews)</span>
+        </div>
+        <button class="btn-hire">Hire Now</button>
+      </div>
+      <div class="profession">
+        <div class="profession-image">
+          <img src="https://parsonsjoinery.com/wp-content/uploads/2016/09/The-difference-between-a-joiner-and-a-carpenter-1.jpg" alt="Carpenter">
+        </div>
+        <h3>Carpenter</h3>
+        <p>Built to last, crafted with care.</p>
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>4.5 (156 reviews)</span>
+        </div>
+        <button class="btn-hire">Hire Now</button>
+      </div>
+      <div class="profession">
+        <div class="profession-image">
+          <img src="https://chamblissplumbing.com/wp-content/uploads/2023/03/whats-a-plumber-1.jpg" alt="Plumber">
+        </div>
+        <h3>Plumber</h3>
+        <p>Your pipes, our promise.</p>
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <span>5.0 (203 reviews)</span>
+        </div>
+        <button class="btn-hire">Hire Now</button>
+      </div>
+      <div class="profession">
+        <div class="profession-image">
+          <img src="https://airtasker-seo-assets-prod.s3.amazonaws.com/en_GB/1724836855863-alterations-vs-tailoring.jpg" alt="Tailor">
+        </div>
+        <h3>Tailor</h3>
+        <p>Crafted for comfort. Designed for you.</p>
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>4.5 (98 reviews)</span>
+        </div>
+        <button class="btn-hire">Hire Now</button>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="about" id="about">
-  <h2>About Atmanirbhar Store</h2>
-  <p>Atmanirbhar Store is an initiative to promote India's local talent and products.
-  We connect you directly to artisans, farmers, and small businesses across the country.
-  Every purchase you make supports a self-reliant India.</p>
+  <div class="container">
+    <h2>About Atmanirbhar Store</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p>Atmanirbhar Store is an initiative to promote India's local talent and products. We connect you directly to artisans, farmers, and small businesses across the country.</p>
+        <p>Every purchase you make supports a self-reliant India and helps preserve traditional crafts and skills that have been passed down through generations.</p>
+        <div class="stats">
+          <div class="stat">
+            <h3>500+</h3>
+            <p>Local Artisans</p>
+          </div>
+          <div class="stat">
+            <h3>1000+</h3>
+            <p>Products</p>
+          </div>
+          <div class="stat">
+            <h3>50+</h3>
+            <p>Cities</p>
+          </div>
+        </div>
+      </div>
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Indian Artisan">
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="contact" id="contact">
-  <h2>Contact Us</h2>
-  <form id="contactForm">
-    <input type="text" placeholder="Your Name" required />
-    <input type="email" placeholder="Your Email" required />
-    <textarea rows="4" placeholder="Your Message"></textarea>
-    <button class="send" type="submit">Send Message</button>
-  </form>
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p class="section-subtitle">Get in touch with us for any queries</p>
+    <div class="contact-content">
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <h3>Address</h3>
+            <p>123 Local Market, New Delhi, India - 110001</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <div>
+            <h3>Phone</h3>
+            <p>+91 98765 43210</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <h3>Email</h3>
+            <p>info@atmanirbharstore.com</p>
+          </div>
+        </div>
+      </div>
+      <form id="contactForm" class="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <input type="tel" placeholder="Your Phone" />
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button class="btn-send" type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
 </section>
 
 <footer>
-  <p>© 2025 Atmanirbhar Store | Made with ❤️ in India</p>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3><i class="fas fa-hands-helping"></i> Atmanirbhar Store</h3>
+        <p>Supporting local artisans and professionals across India.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#profession">Professionals</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="#">Handicrafts</a></li>
+          <li><a href="#">Organic Food</a></li>
+          <li><a href="#">Home Services</a></li>
+          <li><a href="#">Textiles</a></li>
+          <li><a href="#">Pottery</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Newsletter</h3>
+        <p>Subscribe to get updates on new products and offers</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your Email" required>
+          <button type="submit"><i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Atmanirbhar Store | Made with ❤️ in India</p>
+    </div>
+  </div>
 </footer>
 
-<!-- Parent Slides -->
+<!-- Slide Panels for Products -->
 <div class="slide-panel" id="slidePottery">
   <button class="close-btn" onclick="closePanel('slidePottery')">×</button>
   <h2>Clay Pottery Collection</h2>
-  <div class="product-item" data-subslide="vaseModal"> 
+  <div class="product-item" data-subslide="vaseModal">
     <img src="https://m.media-amazon.com/images/I/61hu+uVVvJL._UF894,1000_QL80_.jpg" alt="Handmade Vase">
     <h3>Handmade Vase</h3>
     <p>Beautifully crafted earthen vase for home decor.</p>
+    <span class="price">₹499</span>
   </div>
   <div class="product-item" data-subslide="bowlModal">
     <img src="https://i.etsystatic.com/11493970/r/il/ae894e/2469064208/il_570xN.2469064208_tm4v.jpg" alt="Decorative Bowl">
     <h3>Decorative Bowl</h3>
     <p>Perfect for gifting or dining table decoration.</p>
+    <span class="price">₹349</span>
   </div>
 </div>
 
@@ -94,11 +368,13 @@
     <img src="https://image.hm.com/assets/hm/d3/37/d33773290274516233a51c411fc0a0d12b68818c.jpg" alt="Handwoven Scarf">
     <h3>Handwoven Scarf</h3>
     <p>Soft scarves made by rural artisans using traditional techniques.</p>
+    <span class="price">₹799</span>
   </div>
   <div class="product-item" data-subslide="bagModal">
     <img src="https://m.media-amazon.com/images/I/71EXupWBD8L._SX522_.jpg" alt="Artisan Bag">
     <h3>Artisan Bag</h3>
     <p>Stylish bags crafted from natural fibers.</p>
+    <span class="price">₹1299</span>
   </div>
 </div>
 
@@ -109,28 +385,31 @@
     <img src="https://happyharvestfarms.com/blog/wp-content/uploads/2023/12/millet.jpg" alt="Organic Millets">
     <h3>Organic Millets</h3>
     <p>Healthy millets directly from local farmers.</p>
+    <span class="price">₹199/kg</span>
   </div>
-  <div class="product-item" data-subslide="PickelModal">
+  <div class="product-item" data-subslide="pickleModal">
     <img src="https://vegecravings.com/wp-content/uploads/2016/12/mango-pickle-recipe-step-by-step-instructions-7.jpg" alt="Local Honey">
-    <h3>Pickels</h3>
-    <p>Tasty,tempting and organic pickels</p>
+    <h3>Homemade Pickles</h3>
+    <p>Tasty, tempting and organic pickles</p>
+    <span class="price">₹299</span>
   </div>
-  
 </div>
 
-<!-- Sub-subslides -->
+<!-- Sub-slide Panels -->
 <div class="slide-panel sub-slide" id="vaseModal">
   <button class="close-btn" onclick="closePanel('vaseModal')">×</button>
   <h2>Vase Collection</h2>
   <div class="variant-card">
     <img src="https://m.media-amazon.com/images/I/61hu+uVVvJL._UF894,1000_QL80_.jpg" alt="Vase 1">
-    <h3>Vase 1</h3>
-    <button onclick="addToCart('Vase 1')">Add to Cart</button>
+    <h3>Traditional Vase</h3>
+    <p>Handcrafted with traditional motifs</p>
+    <button onclick="addToCart({id: 'vase1', name: 'Traditional Vase', price: 499})">Add to Cart</button>
   </div>
   <div class="variant-card">
-    <img src="https://images.unsplash.com/photo-1598300055174-71f756c8f592" alt="Vase 2">
-    <h3>Vase 2</h3>
-    <button onclick="addToCart('Vase 2')">Add to Cart</button>
+    <img src="https://m.media-amazon.com/images/I/61aCB42rsFL.jpg" alt="Vase 2">
+    <h3>Modern Vase</h3>
+    <p>Contemporary design with traditional craftsmanship</p>
+    <button onclick="addToCart({id: 'vase2', name: 'Modern Vase', price: 699})">Add to Cart</button>
   </div>
 </div>
 
@@ -139,8 +418,9 @@
   <h2>Bowl Collection</h2>
   <div class="variant-card">
     <img src="https://i.etsystatic.com/11493970/r/il/ae894e/2469064208/il_570xN.2469064208_tm4v.jpg" alt="Bowl 1">
-    <h3>Bowl 1</h3>
-    <button onclick="addToCart('Bowl 1')">Add to Cart</button>
+    <h3>Decorative Bowl Set</h3>
+    <p>Set of 3 decorative bowls</p>
+    <button onclick="addToCart({id: 'bowl1', name: 'Decorative Bowl Set', price: 349})">Add to Cart</button>
   </div>
 </div>
 
@@ -149,8 +429,9 @@
   <h2>Scarf Collection</h2>
   <div class="variant-card">
     <img src="https://image.hm.com/assets/hm/d3/37/d33773290274516233a51c411fc0a0d12b68818c.jpg" alt="Scarf 1">
-    <h3>Scarf 1</h3>
-    <button onclick="addToCart('Scarf 1')">Add to Cart</button>
+    <h3>Silk Scarf</h3>
+    <p>Handwoven silk scarf with traditional patterns</p>
+    <button onclick="addToCart({id: 'scarf1', name: 'Silk Scarf', price: 799})">Add to Cart</button>
   </div>
 </div>
 
@@ -159,8 +440,9 @@
   <h2>Bag Collection</h2>
   <div class="variant-card">
     <img src="https://m.media-amazon.com/images/I/71EXupWBD8L._SX522_.jpg" alt="Bag 1">
-    <h3>Bag 1</h3>
-    <button onclick="addToCart('Bag 1')">Add to Cart</button>
+    <h3>Jute Tote Bag</h3>
+    <p>Eco-friendly jute bag with hand embroidery</p>
+    <button onclick="addToCart({id: 'bag1', name: 'Jute Tote Bag', price: 1299})">Add to Cart</button>
   </div>
 </div>
 
@@ -169,28 +451,109 @@
   <h2>Millet Collection</h2>
   <div class="variant-card">
     <img src="https://happyharvestfarms.com/blog/wp-content/uploads/2023/12/millet.jpg" alt="Millet 1">
-    <h3>Millet 1</h3>
-    <button onclick="addToCart('Millet 1')">Add to Cart</button>
+    <h3>Foxtail Millet</h3>
+    <p>Organic foxtail millet, rich in fiber</p>
+    <button onclick="addToCart({id: 'millet1', name: 'Foxtail Millet (1kg)', price: 199})">Add to Cart</button>
   </div>
 </div>
 
-<div class="slide-panel sub-slide" id="honeyModal">
-  <button class="close-btn" onclick="closePanel('honeyModal')">×</button>
-  <h2>Honey Collection</h2>
+<div class="slide-panel sub-slide" id="pickleModal">
+  <button class="close-btn" onclick="closePanel('pickleModal')">×</button>
+  <h2>Pickle Collection</h2>
   <div class="variant-card">
-    <img src="https://images.unsplash.com/photo-1616745300968-7c3d8c8a22a4" alt="Honey 1">
-    <h3>Honey 1</h3>
-    <button onclick="addToCart('Honey 1')">Add to Cart</button>
+    <img src="https://vegecravings.com/wp-content/uploads/2016/12/mango-pickle-recipe-step-by-step-instructions-7.jpg" alt="Pickle 1">
+    <h3>Mango Pickle</h3>
+    <p>Traditional spicy mango pickle</p>
+    <button onclick="addToCart({id: 'pickle1', name: 'Mango Pickle (500g)', price: 299})">Add to Cart</button>
   </div>
 </div>
 
-<!-- Cart -->
+<!-- Cart Panel -->
+
 <button id="cartBtn">🛒</button>
-<div class="slide-panel" id="cartPanel">
+<div class="slide-panel cart-panel" id="cartPanel">
   <button class="close-btn" onclick="closePanel('cartPanel')">×</button>
   <h2>Your Cart</h2>
   <div id="cartItems"></div>
-  <button onclick="clearCart()">Clear Cart</button>
+  <div class="cart-total">
+    <h3>Total: ₹<span id="cartTotal">0</span></h3>
+  </div>
+  <div class="cart-actions">
+    <button class="btn-continue" onclick="closePanel('cartPanel')">Continue Shopping</button>
+    <button class="btn-checkout" onclick="proceedToPayment()">Proceed to Payment</button>
+    <button class="btn-clear" onclick="clearCart()">Clear Cart</button>
+  </div>
+</div>
+
+<!-- Payment Panel -->
+<div class="slide-panel" id="paymentPanel">
+  <button class="close-btn" onclick="closePanel('paymentPanel')">×</button>
+  <h2>Payment</h2>
+  <div class="payment-content">
+    <div class="order-summary">
+      <h3>Order Summary</h3>
+      <div id="paymentItems"></div>
+      <div class="payment-total">
+        <h3>Total Amount: ₹<span id="paymentTotal">0</span></h3>
+      </div>
+    </div>
+    
+    <div class="payment-methods">
+      <h3>Select Payment Method</h3>
+      <div class="payment-option">
+        <input type="radio" id="card" name="payment" value="card">
+        <label for="card">Credit/Debit Card</label>
+      </div>
+      <div class="payment-option">
+        <input type="radio" id="upi" name="payment" value="upi">
+        <label for="upi">UPI</label>
+      </div>
+      <div class="payment-option">
+        <input type="radio" id="cod" name="payment" value="cod" checked>
+        <label for="cod">Cash on Delivery</label>
+      </div>
+      
+      <!-- Card Payment Form (Initially Hidden) -->
+      <div class="payment-form" id="cardForm">
+        <div class="form-group">
+          <label for="cardNumber">Card Number</label>
+          <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="expiry">Expiry Date</label>
+            <input type="text" id="expiry" placeholder="MM/YY">
+          </div>
+          <div class="form-group">
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" placeholder="123">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="name">Name on Card</label>
+          <input type="text" id="name" placeholder="John Doe">
+        </div>
+      </div>
+
+      <!-- UPI Payment Form (Initially Hidden) -->
+      <div class="payment-form" id="upiForm">
+        <div class="form-group">
+          <label for="upiId">UPI ID</label>
+          <input type="text" id="upiId" placeholder="yourname@upi">
+        </div>
+      </div>
+
+      <!-- COD Message (Initially Hidden) -->
+      <div class="payment-message" id="codMessage">
+        <p>Pay when your order is delivered. Additional ₹30 delivery charge may apply.</p>
+      </div>
+    </div>
+    
+    <div class="payment-actions">
+      <button class="btn-pay" onclick="processPayment()">Complete Order</button>
+      <button class="btn-back" onclick="closePanel('paymentPanel'); openPanel('cartPanel');">Back to Cart</button>
+    </div>
+  </div>
 </div>
 
 <script src="script.js"></script>
