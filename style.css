@@ -674,6 +674,88 @@ footer {
   background: var(--primary-dark);
 }
 
+/* Professional Slide Panel Styles */
+.professional-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin: 15px 0;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s;
+}
+
+.professional-card:hover {
+  transform: translateY(-5px);
+}
+
+.professional-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.professional-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--primary-light);
+}
+
+.professional-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.professional-info h3 {
+  margin-bottom: 5px;
+  font-size: 1.3rem;
+}
+
+.professional-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+.detail-item i {
+  color: var(--primary);
+  width: 16px;
+}
+
+.professional-bio {
+  color: var(--text-light);
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.btn-contact {
+  background: var(--secondary);
+  color: var(--white);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 100%;
+}
+
+.btn-contact:hover {
+  background: #388e3c;
+  transform: translateY(-2px);
+}
+
 /* Enhanced Cart */
 .cart-indicator {
   position: fixed;
@@ -996,6 +1078,15 @@ footer {
   .form-row {
     flex-direction: column;
     gap: 0;
+  }
+  
+  .professional-details {
+    grid-template-columns: 1fr;
+  }
+  
+  .professional-header {
+    flex-direction: column;
+    text-align: center;
   }
 }
 
