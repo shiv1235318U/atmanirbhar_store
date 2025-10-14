@@ -29,11 +29,40 @@ function setupEventListeners() {
         openPanel('cartPanel');
     });
 
-    // Contact form
+    // Contact form - Formspree integration with AJAX
     document.getElementById('contactForm').addEventListener('submit', function(e) {
         e.preventDefault();
-        alert('Thank you! Your message has been sent.');
-        this.reset();
+        
+        const submitBtn = this.querySelector('.btn-send');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+        
+        // Use AJAX to submit to Formspree
+        const formData = new FormData(this);
+        
+        fetch('https://formspree.io/f/mblzpnqp', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                showNotification('Thank you! Your message has been sent successfully.');
+                this.reset();
+            } else {
+                showNotification('There was a problem sending your message. Please try again.');
+            }
+        })
+        .catch(error => {
+            showNotification('There was a problem sending your message. Please try again.');
+        })
+        .finally(() => {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        });
     });
 
     // Mobile menu
@@ -75,7 +104,10 @@ function setupEventListeners() {
     // Hire buttons for professions
     document.querySelectorAll('.btn-hire').forEach(button => {
         button.addEventListener('click', function() {
-            alert('Professional contacted! They will reach out to you soon.');
+            const panelId = this.getAttribute('data-panel');
+            if (panelId) {
+                openPanel(panelId);
+            }
         });
     });
 
@@ -273,6 +305,15 @@ function updateCartUI() {
         
         if (cartTotal) cartTotal.textContent = total;
     }
+}
+
+// Professional contact function
+function contactProfessional(name, phone) {
+    showNotification(`Contacting ${name} at ${phone}...`);
+    // In a real application, this would initiate a call or open a chat
+    setTimeout(() => {
+        showNotification(`${name} has been notified and will contact you shortly!`);
+    }, 1500);
 }
 
 // Payment functions
