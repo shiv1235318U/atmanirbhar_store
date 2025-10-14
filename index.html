@@ -129,7 +129,7 @@
     <div class="profession-grid">
       <div class="profession">
         <div class="profession-image">
-          <img src="https://tiimg.tistatic.com/fp/1/005/193/fine-finish-interior-wall-paint-968.jpg" alt="Painters">
+          <img src="https://media.istockphoto.com/id/508449768/photo/painter-painting-with-paint-roller.jpg?s=612x612&w=0&k=20&c=m-vuBg8Tx0yMT4j1nTeUnd6MK8ivb9TKgqW2D3akPkE=" alt="Painters">
         </div>
         <h3>Painters</h3>
         <p>Precision. Passion. Painted to perfection make the walls that speak up.</p>
@@ -141,7 +141,7 @@
           <i class="fas fa-star-half-alt"></i>
           <span>4.5 (120 reviews)</span>
         </div>
-        <button class="btn-hire">Hire Now</button>
+        <button class="btn-hire" data-panel="paintersPanel">Hire Now</button>
       </div>
       <div class="profession">
         <div class="profession-image">
@@ -157,7 +157,7 @@
           <i class="fas fa-star"></i>
           <span>5.0 (89 reviews)</span>
         </div>
-        <button class="btn-hire">Hire Now</button>
+        <button class="btn-hire" data-panel="householdPanel">Hire Now</button>
       </div>
       <div class="profession">
         <div class="profession-image">
@@ -173,7 +173,7 @@
           <i class="fas fa-star"></i>
           <span>5.0 (67 reviews)</span>
         </div>
-        <button class="btn-hire">Hire Now</button>
+        <button class="btn-hire" data-panel="chefPanel">Hire Now</button>
       </div>
       <div class="profession">
         <div class="profession-image">
@@ -189,7 +189,7 @@
           <i class="fas fa-star-half-alt"></i>
           <span>4.5 (156 reviews)</span>
         </div>
-        <button class="btn-hire">Hire Now</button>
+        <button class="btn-hire" data-panel="carpenterPanel">Hire Now</button>
       </div>
       <div class="profession">
         <div class="profession-image">
@@ -205,7 +205,7 @@
           <i class="fas fa-star"></i>
           <span>5.0 (203 reviews)</span>
         </div>
-        <button class="btn-hire">Hire Now</button>
+        <button class="btn-hire" data-panel="plumberPanel">Hire Now</button>
       </div>
       <div class="profession">
         <div class="profession-image">
@@ -221,7 +221,7 @@
           <i class="fas fa-star-half-alt"></i>
           <span>4.5 (98 reviews)</span>
         </div>
-        <button class="btn-hire">Hire Now</button>
+        <button class="btn-hire" data-panel="tailorPanel">Hire Now</button>
       </div>
     </div>
   </div>
@@ -284,11 +284,11 @@
           </div>
         </div>
       </div>
-      <form id="contactForm" class="contact-form">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <input type="tel" placeholder="Your Phone" />
-        <textarea rows="5" placeholder="Your Message" required></textarea>
+      <form id="contactForm" class="contact-form" action="https://formspree.io/f/mblzpnqp" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="tel" name="phone" placeholder="Your Phone" />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
         <button class="btn-send" type="submit">Send Message</button>
       </form>
     </div>
@@ -395,7 +395,7 @@
   </div>
 </div>
 
-<!-- Sub-slide Panels -->
+<!-- Sub-slide Panels for Products -->
 <div class="slide-panel sub-slide" id="vaseModal">
   <button class="close-btn" onclick="closePanel('vaseModal')">×</button>
   <h2>Vase Collection</h2>
@@ -468,8 +468,311 @@
   </div>
 </div>
 
-<!-- Cart Panel -->
+<!-- Professional Sub-slide Panels -->
+<div class="slide-panel sub-slide" id="paintersPanel">
+  <button class="close-btn" onclick="closePanel('paintersPanel')">×</button>
+  <h2>Available Painters</h2>
+  
+  <div class="professional-card">
+    <div class="professional-header">
+      <div class="professional-image">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rajesh Kumar">
+      </div>
+      <div class="professional-info">
+        <h3>Rajesh Kumar</h3>
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>4.5 (87 reviews)</span>
+        </div>
+      </div>
+    </div>
+    <div class="professional-details">
+      <div class="detail-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>South Delhi</span>
+      </div>
+      <div class="detail-item">
+        <i class="fas fa-clock"></i>
+        <span>Available: Mon-Sat, 9AM-6PM</span>
+      </div>
+      <div class="detail-item">
+        <i class="fas fa-phone"></i>
+        <span>+91 98765 43210</span>
+      </div>
+      <div class="detail-item">
+        <i class="fas fa-rupee-sign"></i>
+        <span>Starting from ₹1500/day</span>
+      </div>
+    </div>
+    <p class="professional-bio">With over 8 years of experience, I specialize in interior and exterior painting with a focus on quality and attention to detail.</p>
+    <button class="btn-contact" onclick="contactProfessional('Rajesh Kumar', '+91 98765 43210')">Contact Now</button>
+  </div>
+  
+  <div class="professional-card">
+    <div class="professional-header">
+      <div class="professional-image">
+        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Amit Sharma">
+      </div>
+      <div class="professional-info">
+        <h3>Amit Sharma</h3>
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <span>5.0 (64 reviews)</span>
+        </div>
+      </div>
+    </div>
+    <div class="professional-details">
+      <div class="detail-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>West Delhi</span>
+      </div>
+      <div class="detail-item">
+        <i class="fas fa-clock"></i>
+        <span>Available: Tue-Sun, 8AM-7PM</span>
+      </div>
+      <div class="detail-item">
+        <i class="fas fa-phone"></i>
+        <span>+91 87654 32109</span>
+      </div>
+      <div class="detail-item">
+        <i class="fas fa-rupee-sign"></i>
+        <span>Starting from ₹1800/day</span>
+      </div>
+    </div>
+    <p class="professional-bio">Specializing in decorative and textured painting with 12 years of experience. I provide free color consultation.</p>
+    <button class="btn-contact" onclick="contactProfessional('Amit Sharma', '+91 87654 32109')">Contact Now</button>
+  </div>
+</div>
 
+<div class="slide-panel sub-slide" id="householdPanel">
+  <button class="close-btn" onclick="closePanel('householdPanel')">×</button>
+  <h2>Available Household Workers</h2>
+  
+  <div class="professional-card">
+    <div class="professional-header">
+      <div class="professional-image">
+        <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Priya Singh">
+      </div>
+      <div class="professional-info">
+        <h3>Priya Singh</h3>
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <span>5.0 (42 reviews)</span>
+        </div>
+      </div>
+    </div>
+    <div class="professional-details">
+      <div class="detail-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>East Delhi</span>
+      </div>
+      <div class="detail-item">
+        <i class="fas fa-clock"></i>
+        <span>Available: Mon-Sat, 8AM-5PM</span>
+      </div>
+      <div class="detail-item">
+        <i class="fas fa-phone"></i>
+        <span>+91 76543 21098</span>
+      </div>
+      <div class="detail-item">
+        <i class="fas fa-rupee-sign"></i>
+        <span>Starting from ₹800/day</span>
+      </div>
+    </div>
+    <p class="professional-bio">Professional cleaning services with 6 years of experience. Specialized in deep cleaning and organization.</p>
+    <button class="btn-contact" onclick="contactProfessional('Priya Singh', '+91 76543 21098')">Contact Now</button>
+  </div>
+</div>
+
+<div class="slide-panel sub-slide" id="chefPanel">
+  <button class="close-btn" onclick="closePanel('chefPanel')">×</button>
+  <h2>Available Chefs</h2>
+  
+  <div class="professional-card">
+    <div class="professional-header">
+      <div class="professional-image">
+        <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Vikram Mehta">
+      </div>
+      <div class="professional-info">
+        <h3>Vikram Mehta</h3>
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <span>5.0 (38 reviews)</span>
+        </div>
+      </div>
+    </div>
+    <div class="professional-details">
+      <div class="detail-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Central Delhi</span>
+      </div>
+      <div class="detail-item">
+        <i class="fas fa-clock"></i>
+        <span>Available: All days, 10AM-10PM</span>
+      </div>
+      <div class="detail-item">
+        <i class="fas fa-phone"></i>
+        <span>+91 65432 10987</span>
+      </div>
+      <div class="detail-item">
+        <i class="fas fa-rupee-sign"></i>
+        <span>Starting from ₹2500/event</span>
+      </div>
+    </div>
+    <p class="professional-bio">Professional chef with 10 years of experience in North Indian and Continental cuisine. Specializing in home catering for events.</p>
+    <button class="btn-contact" onclick="contactProfessional('Vikram Mehta', '+91 65432 10987')">Contact Now</button>
+  </div>
+</div>
+
+<div class="slide-panel sub-slide" id="carpenterPanel">
+  <button class="close-btn" onclick="closePanel('carpenterPanel')">×</button>
+  <h2>Available Carpenters</h2>
+  
+  <div class="professional-card">
+    <div class="professional-header">
+      <div class="professional-image">
+        <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="Ramesh Patel">
+      </div>
+      <div class="professional-info">
+        <h3>Ramesh Patel</h3>
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>4.5 (76 reviews)</span>
+        </div>
+      </div>
+    </div>
+    <div class="professional-details">
+      <div class="detail-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>North Delhi</span>
+      </div>
+      <div class="detail-item">
+        <i class="fas fa-clock"></i>
+        <span>Available: Mon-Sat, 9AM-6PM</span>
+      </div>
+      <div class="detail-item">
+        <i class="fas fa-phone"></i>
+        <span>+91 54321 09876</span>
+      </div>
+      <div class="detail-item">
+        <i class="fas fa-rupee-sign"></i>
+        <span>Starting from ₹1200/day</span>
+      </div>
+    </div>
+    <p class="professional-bio">Experienced carpenter with 15 years in furniture making and repair. Specialized in custom woodwork and restoration.</p>
+    <button class="btn-contact" onclick="contactProfessional('Ramesh Patel', '+91 54321 09876')">Contact Now</button>
+  </div>
+</div>
+
+<div class="slide-panel sub-slide" id="plumberPanel">
+  <button class="close-btn" onclick="closePanel('plumberPanel')">×</button>
+  <h2>Available Plumbers</h2>
+  
+  <div class="professional-card">
+    <div class="professional-header">
+      <div class="professional-image">
+        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Sanjay Gupta">
+      </div>
+      <div class="professional-info">
+        <h3>Sanjay Gupta</h3>
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <span>5.0 (112 reviews)</span>
+        </div>
+      </div>
+    </div>
+    <div class="professional-details">
+      <div class="detail-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>All Delhi Areas</span>
+      </div>
+      <div class="detail-item">
+        <i class="fas fa-clock"></i>
+        <span>Available: 24/7 Emergency Service</span>
+      </div>
+      <div class="detail-item">
+        <i class="fas fa-phone"></i>
+        <span>+91 43210 98765</span>
+      </div>
+      <div class="detail-item">
+        <i class="fas fa-rupee-sign"></i>
+        <span>Starting from ₹500/service</span>
+      </div>
+    </div>
+    <p class="professional-bio">Licensed plumber with 12 years of experience. Specializing in pipe repair, installation, and emergency plumbing services.</p>
+    <button class="btn-contact" onclick="contactProfessional('Sanjay Gupta', '+91 43210 98765')">Contact Now</button>
+  </div>
+</div>
+
+<div class="slide-panel sub-slide" id="tailorPanel">
+  <button class="close-btn" onclick="closePanel('tailorPanel')">×</button>
+  <h2>Available Tailors</h2>
+  
+  <div class="professional-card">
+    <div class="professional-header">
+      <div class="professional-image">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Meena Devi">
+      </div>
+      <div class="professional-info">
+        <h3>Meena Devi</h3>
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>4.5 (53 reviews)</span>
+        </div>
+      </div>
+    </div>
+    <div class="professional-details">
+      <div class="detail-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>South Delhi</span>
+      </div>
+      <div class="detail-item">
+        <i class="fas fa-clock"></i>
+        <span>Available: Mon-Sat, 10AM-7PM</span>
+      </div>
+      <div class="detail-item">
+        <i class="fas fa-phone"></i>
+        <span>+91 32109 87654</span>
+      </div>
+      <div class="detail-item">
+        <i class="fas fa-rupee-sign"></i>
+        <span>Starting from ₹300/garment</span>
+      </div>
+    </div>
+    <p class="professional-bio">Master tailor with 20 years of experience in traditional and modern clothing. Specialized in custom fitting and alterations.</p>
+    <button class="btn-contact" onclick="contactProfessional('Meena Devi', '+91 32109 87654')">Contact Now</button>
+  </div>
+</div>
+
+<!-- Cart Panel -->
 <button id="cartBtn">🛒</button>
 <div class="slide-panel cart-panel" id="cartPanel">
   <button class="close-btn" onclick="closePanel('cartPanel')">×</button>
