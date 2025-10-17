@@ -284,7 +284,7 @@
           </div>
         </div>
       </div>
-      <form id="contactForm" class="contact-form" action="https://formspree.io/f/mblzpnqp" method="POST">
+      <form id="contactForm" class="contact-form">
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
         <input type="tel" name="phone" placeholder="Your Phone" />
@@ -331,10 +331,7 @@
       <div class="footer-section">
         <h3>Newsletter</h3>
         <p>Subscribe to get updates on new products and offers</p>
-        <form class="newsletter-form">
-          <input type="email" placeholder="Your Email" required>
-          <button type="submit"><i class="fas fa-paper-plane"></i></button>
-        </form>
+        
       </div>
     </div>
     <div class="footer-bottom">
@@ -509,7 +506,7 @@
       </div>
     </div>
     <p class="professional-bio">With over 8 years of experience, I specialize in interior and exterior painting with a focus on quality and attention to detail.</p>
-    <button class="btn-contact" onclick="contactProfessional('Rajesh Kumar', '+91 98765 43210')">Contact Now</button>
+    <button class="btn-contact" onclick="hireProfessional({id: 'painter1', name: 'Rajesh Kumar', profession: 'Painter', price: 1500, phone: '+91 98765 43210', image: 'https://randomuser.me/api/portraits/men/32.jpg'})">Hire Now</button>
   </div>
   
   <div class="professional-card">
@@ -548,7 +545,7 @@
       </div>
     </div>
     <p class="professional-bio">Specializing in decorative and textured painting with 12 years of experience. I provide free color consultation.</p>
-    <button class="btn-contact" onclick="contactProfessional('Amit Sharma', '+91 87654 32109')">Contact Now</button>
+    <button class="btn-contact" onclick="hireProfessional({id: 'painter2', name: 'Amit Sharma', profession: 'Painter', price: 1800, phone: '+91 87654 32109', image: 'https://randomuser.me/api/portraits/men/45.jpg'})">Hire Now</button>
   </div>
 </div>
 
@@ -592,7 +589,7 @@
       </div>
     </div>
     <p class="professional-bio">Professional cleaning services with 6 years of experience. Specialized in deep cleaning and organization.</p>
-    <button class="btn-contact" onclick="contactProfessional('Priya Singh', '+91 76543 21098')">Contact Now</button>
+    <button class="btn-contact" onclick="hireProfessional({id: 'household1', name: 'Priya Singh', profession: 'Household Worker', price: 800, phone: '+91 76543 21098', image: 'https://randomuser.me/api/portraits/women/33.jpg'})">Hire Now</button>
   </div>
 </div>
 
@@ -636,7 +633,7 @@
       </div>
     </div>
     <p class="professional-bio">Professional chef with 10 years of experience in North Indian and Continental cuisine. Specializing in home catering for events.</p>
-    <button class="btn-contact" onclick="contactProfessional('Vikram Mehta', '+91 65432 10987')">Contact Now</button>
+    <button class="btn-contact" onclick="hireProfessional({id: 'chef1', name: 'Vikram Mehta', profession: 'Chef', price: 2500, phone: '+91 65432 10987', image: 'https://randomuser.me/api/portraits/men/22.jpg'})">Hire Now</button>
   </div>
 </div>
 
@@ -680,7 +677,7 @@
       </div>
     </div>
     <p class="professional-bio">Experienced carpenter with 15 years in furniture making and repair. Specialized in custom woodwork and restoration.</p>
-    <button class="btn-contact" onclick="contactProfessional('Ramesh Patel', '+91 54321 09876')">Contact Now</button>
+    <button class="btn-contact" onclick="hireProfessional({id: 'carpenter1', name: 'Ramesh Patel', profession: 'Carpenter', price: 1200, phone: '+91 54321 09876', image: 'https://randomuser.me/api/portraits/men/55.jpg'})">Hire Now</button>
   </div>
 </div>
 
@@ -724,7 +721,7 @@
       </div>
     </div>
     <p class="professional-bio">Licensed plumber with 12 years of experience. Specializing in pipe repair, installation, and emergency plumbing services.</p>
-    <button class="btn-contact" onclick="contactProfessional('Sanjay Gupta', '+91 43210 98765')">Contact Now</button>
+    <button class="btn-contact" onclick="hireProfessional({id: 'plumber1', name: 'Sanjay Gupta', profession: 'Plumber', price: 500, phone: '+91 43210 98765', image: 'https://randomuser.me/api/portraits/men/67.jpg'})">Hire Now</button>
   </div>
 </div>
 
@@ -768,12 +765,11 @@
       </div>
     </div>
     <p class="professional-bio">Master tailor with 20 years of experience in traditional and modern clothing. Specialized in custom fitting and alterations.</p>
-    <button class="btn-contact" onclick="contactProfessional('Meena Devi', '+91 32109 87654')">Contact Now</button>
+    <button class="btn-contact" onclick="hireProfessional({id: 'tailor1', name: 'Meena Devi', profession: 'Tailor', price: 300, phone: '+91 32109 87654', image: 'https://randomuser.me/api/portraits/women/44.jpg'})">Hire Now</button>
   </div>
 </div>
 
 <!-- Cart Panel -->
-<button id="cartBtn">🛒</button>
 <div class="slide-panel cart-panel" id="cartPanel">
   <button class="close-btn" onclick="closePanel('cartPanel')">×</button>
   <h2>Your Cart</h2>
@@ -786,6 +782,109 @@
     <button class="btn-checkout" onclick="proceedToPayment()">Proceed to Payment</button>
     <button class="btn-clear" onclick="clearCart()">Clear Cart</button>
   </div>
+</div>
+
+<!-- Hire Panel -->
+<div class="slide-panel hire-panel" id="hirePanel">
+  <button class="close-btn" onclick="closePanel('hirePanel')">×</button>
+  <h2>Your Hired Professionals</h2>
+  <div id="hireItems"></div>
+  <div class="hire-total">
+    <h3>Total: ₹<span id="hireTotal">0</span></h3>
+  </div>
+  <div class="hire-actions">
+    <button class="btn-continue" onclick="closePanel('hirePanel')">Continue Browsing</button>
+    <button class="btn-checkout" onclick="proceedToHirePayment()">Pay for Services</button>
+    <button class="btn-clear" onclick="clearHires()">Clear All</button>
+  </div>
+</div>
+
+<!-- Orders History Panel -->
+<div class="slide-panel orders-panel" id="ordersPanel">
+  <button class="close-btn" onclick="closePanel('ordersPanel')">×</button>
+  <h2>Your Order History</h2>
+  <div id="ordersItems"></div>
+  <div class="orders-actions">
+    <button class="btn-continue" onclick="closePanel('ordersPanel')">Continue Shopping</button>
+  </div>
+</div>
+
+<!-- Hire Payment Panel -->
+<div class="slide-panel" id="hirePaymentPanel">
+  <button class="close-btn" onclick="closePanel('hirePaymentPanel')">×</button>
+  <h2>Payment for Services</h2>
+  <div class="payment-content">
+    <div class="order-summary">
+      <h3>Service Summary</h3>
+      <div id="hirePaymentItems"></div>
+      <div class="payment-total">
+        <h3>Total Amount: ₹<span id="hirePaymentTotal">0</span></h3>
+      </div>
+    </div>
+    
+    <div class="payment-methods">
+      <h3>Select Payment Method</h3>
+      <div class="payment-option">
+        <input type="radio" id="hireCard" name="hirePayment" value="card">
+        <label for="hireCard">Credit/Debit Card</label>
+      </div>
+      <div class="payment-option">
+        <input type="radio" id="hireUpi" name="hirePayment" value="upi">
+        <label for="hireUpi">UPI</label>
+      </div>
+      <div class="payment-option">
+        <input type="radio" id="hireCod" name="hirePayment" value="cod" checked>
+        <label for="hireCod">Cash on Delivery</label>
+      </div>
+      
+      <!-- Card Payment Form (Initially Hidden) -->
+      <div class="payment-form" id="hireCardForm">
+        <div class="form-group">
+          <label for="hireCardNumber">Card Number</label>
+          <input type="text" id="hireCardNumber" placeholder="1234 5678 9012 3456">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="hireExpiry">Expiry Date</label>
+            <input type="text" id="hireExpiry" placeholder="MM/YY">
+          </div>
+          <div class="form-group">
+            <label for="hireCvv">CVV</label>
+            <input type="text" id="hireCvv" placeholder="123">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="hireName">Name on Card</label>
+          <input type="text" id="hireName" placeholder="John Doe">
+        </div>
+      </div>
+
+      <!-- UPI Payment Form (Initially Hidden) -->
+      <div class="payment-form" id="hireUpiForm">
+        <div class="form-group">
+          <label for="hireUpiId">UPI ID</label>
+          <input type="text" id="hireUpiId" placeholder="yourname@upi">
+        </div>
+      </div>
+
+      <!-- COD Message (Initially Hidden) -->
+      <div class="payment-message" id="hireCodMessage">
+        <p>Pay when the service is completed. Additional ₹30 service charge may apply.</p>
+      </div>
+    </div>
+    
+    <div class="payment-actions">
+      <button class="btn-pay" onclick="processHirePayment()">Complete Payment</button>
+      <button class="btn-back" onclick="closePanel('hirePaymentPanel'); openPanel('hirePanel');">Back to Hires</button>
+    </div>
+  </div>
+</div>
+
+<!-- Rating Panel -->
+<div class="slide-panel" id="ratingPanel">
+  <button class="close-btn" onclick="closePanel('ratingPanel')">×</button>
+  <h2>Rate Your Experience</h2>
+  <div id="ratingContent"></div>
 </div>
 
 <!-- Payment Panel -->
@@ -857,6 +956,27 @@
       <button class="btn-back" onclick="closePanel('paymentPanel'); openPanel('cartPanel');">Back to Cart</button>
     </div>
   </div>
+</div>
+
+<!-- Floating Action Buttons Container -->
+<div class="floating-buttons">
+  <button id="hireBtn" class="floating-button">
+    <div class="icon">👥</div>
+    <span class="label">Hire</span>
+    <div id="hireIndicator" class="cart-indicator" style="display: none;">0</div>
+  </button>
+  
+  <button id="cartBtn" class="floating-button">
+    <div class="icon">🛒</div>
+    <span class="label">Cart</span>
+    <div id="cartIndicator" class="cart-indicator" style="display: none;">0</div>
+  </button>
+  
+  <button id="ordersBtn" class="floating-button">
+    <div class="icon">📦</div>
+    <span class="label">Orders</span>
+    <div id="ordersIndicator" class="cart-indicator" style="display: none;">0</div>
+  </button>
 </div>
 
 <script src="script.js"></script>
